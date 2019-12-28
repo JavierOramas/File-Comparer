@@ -17,7 +17,10 @@ os.system(line)
 r = open("result.muh")
 
 for i in enumerate(r):
-    temp = i[1][8:]
+    index = i[1].find(destination)
+    if index == -1:
+        index = i[1].find(source)
+    temp = i[1][index:]
     j = 0
     while temp[j] != ':':
         j-= 1
