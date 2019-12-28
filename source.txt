@@ -1,2 +1,0 @@
-/home/javier/.keras/datasets
-/mnt/Data/Matcom/AI/datasets
