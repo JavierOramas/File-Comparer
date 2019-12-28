@@ -1,6 +1,6 @@
 import os
 
-f = open("source.muh")
+f = open(os.path.dirname(os.path.abspath(__file__))+"/source.muh")
 
 flag = True
 for i in enumerate(f):
@@ -11,10 +11,10 @@ for i in enumerate(f):
         destination = i
 source = source[1][0:-1]
 destination = destination[1][:]
-line = "diff -rq "+source+" "+destination+" > result.muh"
+line = "diff -rq "+source+" "+destination+" > "+os.path.dirname(os.path.abspath(__file__))+"/result.muh"
 os.system(line)
 
-r = open("result.muh")
+r = open(os.path.dirname(os.path.abspath(__file__))+"/result.muh")
 
 for i in enumerate(r):
     index = i[1].find(destination)
