@@ -1,6 +1,6 @@
 import os
 
-f = open("source.txt")
+f = open("source.muh")
 
 flag = True
 for i in enumerate(f):
@@ -11,10 +11,10 @@ for i in enumerate(f):
         destination = i
 source = source[1][0:-1]
 destination = destination[1][:]
-line = "diff -rq "+source+" "+destination+" > result.txt"
+line = "diff -rq "+source+" "+destination+" > result.muh"
 os.system(line)
 
-r = open("result.txt")
+r = open("result.muh")
 
 for i in enumerate(r):
     temp = i[1][8:]
