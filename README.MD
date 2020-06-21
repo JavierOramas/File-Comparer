@@ -1,0 +1,3 @@
+the sources file specifies the source an destination directory (each in a diferent line) both to be compared an syncronized
+the script will create a file called result that wil have the info of the files modified
+this script an its config files (.muh) should be copied in cron.daily/hourly/monthly etc...
